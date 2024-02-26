@@ -42,17 +42,17 @@ def readme(txt):
     S=0
     k=0
     for n in F:
-        p = float(n.Per())
-        s = float(n.Plo())
+        p = n.Per()
+        s = n.Plo()
         if p>P:
             P=p
         if s>S:
             S=s
     for n in F:
-        p = float(n.Per())
-        s = float(n.Plo())
+        p = n.Per()
+        s = n.Plo()
         if p==P and s ==S:
-            print("Perimetr:", p, "Ploshad:", s, "Figure:", n)
+            print("Perimetr:", p, "Ploshad:", s, "Figure:", n.who(), n)
             k=1
     if k==0:
         print("This figure does not exist")
